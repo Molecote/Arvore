@@ -48,4 +48,12 @@ public class ArvoreBusca {
         }
     }
 
+    public No excluir(No arvore, int valor){ //Precisa Conferir se o dado existe na arvore antes de remover, validar no main
+        return arvore;
+    }
+
+    public void imprimir(){
+        Printer.impressao(this);
+    }
+
 }

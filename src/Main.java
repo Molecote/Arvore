@@ -8,19 +8,31 @@ public class Main {
         ArvoreBusca.No no5 = new ArvoreBusca.No(80);
         ArvoreBusca.No no6 = new ArvoreBusca.No(50);
         arvoreBusca.inserir(arvoreBusca.raiz,no);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
         arvoreBusca.inserir(arvoreBusca.raiz,no2);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
         arvoreBusca.inserir(arvoreBusca.raiz,no3);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
         arvoreBusca.inserir(arvoreBusca.raiz,no4);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
         arvoreBusca.inserir(arvoreBusca.raiz,no5);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
         arvoreBusca.inserir(arvoreBusca.raiz,no6);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
 
-        System.out.println(arvoreBusca.raiz);
-       // System.out.println(arvoreBusca.raiz.esquerdo);
-       // System.out.println(no2.esquerdo);
-        System.out.println("Valor direito da raiz: " + arvoreBusca.raiz.direito);
-        System.out.println("Valor direito da direita: " + no4.direito);
-        System.out.println("Valor esquerdo da direita: " + no4.esquerdo);
-        System.out.println(arvoreBusca.busca(arvoreBusca.raiz, 80));
+        //System.out.println(arvoreBusca.raiz);
+        // System.out.println(arvoreBusca.raiz.esquerdo);
+        // System.out.println(no2.esquerdo);
+        //System.out.println("Valor direito da raiz: " + arvoreBusca.raiz.direito);
+        //System.out.println("Valor direito da direita: " + no4.direito);
+        //System.out.println("Valor esquerdo da direita: " + no4.esquerdo);
+        //System.out.println(arvoreBusca.busca(arvoreBusca.raiz, 80));
 
     }
 }

@@ -37,7 +37,7 @@ public class Printer {
         }
     }
 
-    public void impressao(ArvoreBusca arvoreBusca) {
+    public static void impressao(ArvoreBusca arvoreBusca) {
         TreePrinter(arvoreBusca);
     }
 }
