@@ -1,47 +1,43 @@
+import java.util.*;
 public class Printer {
-    static int Height(ArvoreBusca root) {
-        if (root == null) {
+
+    public static int height(ArvoreBusca.No raiz) {
+        if (raiz == null)
             return 0;
-        }
-        return Math.Max(Height(root.left), Height(root.right)) + 1;
+        return Math.max(height(raiz.esquerdo), height(raiz.direito)) + 1;
     }
 
-    static int GetCol(int h) {
-        if (h == 1) {
+    public static int getcol(int h) {
+        if (h == 1)
             return 1;
-        }
-        return GetCol(h - 1) + GetCol(h - 1) + 1;
+        return getcol(h - 1) + getcol(h - 1) + 1;
     }
 
-    static void PrintTree(int[][] M, ArvoreBusca root, int col, int row, int height) {
-        if (root == null) {
+    public static void printTree(int[][] M, ArvoreBusca.No raiz, int col, int row, int height) {
+        if (raiz == null)
             return;
-        }
-        M[row][col] = root.data;
-        PrintTree(M, root.left, col - (int)Math.Pow(2, height - 2), row + 1, height - 1);
-        PrintTree(M, root.right, col + (int)Math.Pow(2, height - 2), row + 1, height - 1);
+        M[row][col] = raiz.valor;
+        printTree(M, raiz.esquerdo, col - (int)Math.pow(2, height - 2), row + 1, height - 1);
+        printTree(M, raiz.direito, col + (int)Math.pow(2, height - 2), row + 1, height - 1);
     }
 
-    static void TreePrinter() {
-        int h = Height(myTree.root);
-        int col = GetCol(h);
-        int[][] M = new int[h][];
+    public static void TreePrinter(ArvoreBusca arvore) {
+        int h = height(arvore.raiz);
+        int col = getcol(h);
+        int[][] M = new int[h][col];
+        printTree(M, arvore.raiz, col / 2, 0, h);
         for (int i = 0; i < h; i++) {
-            M[i] = new int[col];
-            Array.Fill(M[i], 0);
-        }
-        PrintTree(M, myTree.root, col / 2, 0, h);
-
-        for (int i = 0; i < M.Length; i++) {
-            string row = "";
-            for (int j = 0; j < M[i].Length; j++) {
-                if (M[i][j] == 0) {
-                    row += " ";
-                } else {
-                    row += M[i][j] + " ";
-                }
+            for (int j = 0; j < col; j++) {
+                if (M[i][j] == 0)
+                    System.out.print("  ");
+                else
+                    System.out.print(M[i][j] + " ");
             }
-            Console.WriteLine(row);
+            System.out.println();
         }
+    }
+
+    public void impressao(ArvoreBusca arvoreBusca) {
+        TreePrinter(arvoreBusca);
     }
 }
