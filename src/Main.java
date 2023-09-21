@@ -7,6 +7,9 @@ public class Main {
         ArvoreBusca.No no4 = new ArvoreBusca.No(55);
         ArvoreBusca.No no5 = new ArvoreBusca.No(80);
         ArvoreBusca.No no6 = new ArvoreBusca.No(50);
+        ArvoreBusca.No no7 = new ArvoreBusca.No(85);
+        ArvoreBusca.No no8 = new ArvoreBusca.No(86);
+        ArvoreBusca.No no9 = new ArvoreBusca.No(87);
         arvoreBusca.inserir(arvoreBusca.raiz,no);
         arvoreBusca.imprimir();
         System.out.println("=============================");
@@ -23,6 +26,18 @@ public class Main {
         arvoreBusca.imprimir();
         System.out.println("=============================");
         arvoreBusca.inserir(arvoreBusca.raiz,no6);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
+        arvoreBusca.inserir(arvoreBusca.raiz,no7);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
+        arvoreBusca.inserir(arvoreBusca.raiz,no8);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
+        arvoreBusca.inserir(arvoreBusca.raiz,no9);
+        arvoreBusca.imprimir();
+        System.out.println("=============================");
+        arvoreBusca.excluir(arvoreBusca.raiz,55);
         arvoreBusca.imprimir();
         System.out.println("=============================");
 
