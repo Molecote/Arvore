@@ -90,7 +90,8 @@ public class ArvoreBusca {
     }
 
     public void imprimir(){
-        Printer.impressao(this);
+        TreeFormatter formatter = new TreeFormatter();
+        System.out.println(formatter.topDown(this.raiz));
     }
 
 }

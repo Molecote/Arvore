@@ -40,14 +40,5 @@ public class Main {
         arvoreBusca.excluir(arvoreBusca.raiz,55);
         arvoreBusca.imprimir();
         System.out.println("=============================");
-
-        //System.out.println(arvoreBusca.raiz);
-        // System.out.println(arvoreBusca.raiz.esquerdo);
-        // System.out.println(no2.esquerdo);
-        //System.out.println("Valor direito da raiz: " + arvoreBusca.raiz.direito);
-        //System.out.println("Valor direito da direita: " + no4.direito);
-        //System.out.println("Valor esquerdo da direita: " + no4.esquerdo);
-        //System.out.println(arvoreBusca.busca(arvoreBusca.raiz, 80));
-
     }
 }
